@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modern Registration Form</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<style>
+		body, html {
+	margin: 0;
+	height: 100%;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+form {
+	background: #fff;
+	width: 400px; /* Set a fixed width */
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: relative; /* For error tooltip */
+}
+
+h2 {
+	margin-bottom: 20px;
+	color: #333;
+}
+
+label {
+	display: block;
+	text-align: left;
+	margin: 15px 0 5px;
+	font-weight: 500;
+	font-size: 1.1em;
+	color: #333;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1em;
+	box-sizing: border-box;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: #23a6d5;
+	color: #fff;
+	font-size: 1.1em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #23d5ab;
+}
+
+.error {
+	color: #d64949;
+	font-size: 0.9em;
+	display: none; /* Hidden by default */
+	position: absolute; /* Positioning for error tooltip */
+	top: -25px; /* Adjust accordingly */
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+	</style>
+</head>
+
+<body>
+	<form action="/submit" method="post">
+		<h2>Register Now</h2>
+
+		<label for="fname">First Name</label>
+		<input type="text" id="fname" name="fname" placeholder="John" required>
+
+		<label for="lname">Last Name</label>
+		<input type="text" id="lname" name="lname" placeholder="Doe" required>
+
+		<label for="stream">Stream</label>
+		<input type="text" id="stream" name="stream" placeholder="Engineering" required>
+
+		<label for="image">Profile Image URL</label>
+		<input type="text" id="image" name="image" placeholder="http://example.com/image.jpg" required>
+
+		<input type="submit" value="Register">
+
+		<div class="error">
+			<!-- Display error message here -->
+		</div>
+	</form>
+</body>
+
+</html>

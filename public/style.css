@@ -1,0 +1,58 @@
+/* Reset some default styling */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background, center content vertically and horizontally */
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the container */
+.container {
+    text-align: center;
+}
+
+/* Style the error code */
+.error-code {
+    font-size: 96px;
+    color: #333;
+}
+
+/* Style the error text */
+.error-text {
+    font-size: 36px;
+    color: #555;
+}
+
+/* Style the error description */
+.error-description {
+    font-size: 18px;
+    color: #777;
+    margin: 20px 0;
+}
+
+/* Style the home link */
+.home-link {
+    display: inline-block;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Change home link background on hover */
+.home-link:hover {
+    background-color: #555;
+}
